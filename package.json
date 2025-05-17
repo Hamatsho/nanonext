@@ -1,0 +1,32 @@
+{
+  "name": "next-app",
+  "v ersion": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.1",
+    "@emran-alhaddad/saudi-riyal-font": "^1.0.3",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "lightgallery": "^2.8.3",
+    "swiper": "^11.2.4",
+    "react-router-dom": "^7.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-download-link": "^2.3.0",
+    "axios": "^1.8.1",
+    "react-loading-skeleton": "^3.5.0",
+    "react-select": "^5.10.1",
+    "react-uploader": "^3.43.0",
+    "react-phone-input-2": "^2.15.1"
+  }
+}

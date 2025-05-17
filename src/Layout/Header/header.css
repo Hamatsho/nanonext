@@ -1,0 +1,311 @@
+/*Start Header */
+:root {
+    --main-transition:0.3s
+}
+* {
+    transition: var(--main-transition);
+}
+header {
+    position: relative;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+    z-index: 500;
+    background-color: white;
+    position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+}
+/*  */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    /* margin: 0 10px; */
+}
+header .logo .name {
+    margin: 0 10px;
+    font-size: 22px;
+    /* background-color: red; */
+}
+
+header .lang {
+    margin: 0 20px;
+    /* border: none; */
+    padding: 3px;
+    font-size: 17;
+    border-color: var(--main-color);
+    outline: none;
+    cursor: pointer;
+    /* flex-direction: row-reverse; */
+}
+/*  */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header .logo {
+    color: var(--main-color);
+    font-weight: bold;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    header .logo {
+        /* width: 100%; */
+        height: 40px;
+        margin: 15px 0 10px!important;
+    }
+}
+
+header .main-nav {
+    display: flex;
+    gap: 1px;
+}
+header .main-nav a.active {
+    background-color: #eeeeee82;
+}
+@media (max-width: 992px) {
+    header .main-nav {
+        margin: auto;
+    }
+}
+
+.megaMenuOpen {
+    opacity: 1 !important;
+        z-index: 100 !important;
+        top: calc(100% + 1px) !important;
+        left: 0 !important;
+}
+
+header .main-nav>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 72px;
+    padding: 0 10px;
+    position: relative;
+    transition: var(--main-transition);
+    overflow: hidden;
+}
+
+/*  */
+header .main-nav>li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .main-nav>li> button {
+    padding: 8px;
+    font-size: 14px;
+    width: 45px;
+    margin:0  5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(235, 248, 236);
+}
+header .main-nav>li>button:hover {
+    background-color: #ddd;
+}
+/*  */
+@media (max-width: 767px) {
+    header .main-nav>li>a {
+        height: 30px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+header .container .main-nav>li>a::before {
+    content: "";
+    position: absolute;
+    background: var(--main-color);
+    width: 100%;
+    height: 4px;
+    left: -100%;
+    top: 0;
+    transition: var(--main-transition);
+}
+
+header .container .main-nav>li>a:hover {
+    color: var(--main-color);
+    background-color: #fefafc;
+    padding-top: 10px;
+}
+
+header .container .main-nav>li>a:hover::before {
+    left: 50%;
+    background-color: var(--three-color);
+}
+header .container .main-nav>li>a.active::before {
+    left: 0;
+}
+header .mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 30px;
+    background-color: white;
+    border-bottom: solid 3px var(--main-color);
+    z-index: -1 !important;
+    display: flex;
+    gap: 40px;
+    /* top: calc(100% + 50px); */
+    top:-500% ;
+    max-height: calc(100vh - 200px);
+    overflow-y: scroll;
+    opacity: 0;
+    transition: top var(--main-transition), opacity var(--main-transition);
+    scroll-padding-block-start: 20px;
+}
+/* when language is Arabic */
+.megaar {
+    flex-direction: row-reverse;
+}
+
+header {
+    text-wrap: nowrap;
+   
+}
+header .main-nav {
+     overflow-X: scroll;
+   /* overflow: scroll visible; */
+    scrollbar-width: none;
+}
+@media (max-width: 767px) {
+    header .mega-menu {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px;
+    }
+        header .container .main-nav>li>a::before {
+            height: 2px;
+        }
+
+}
+header .mega-menu .image {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+header .mega-menu .image img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    max-height: 200px;
+}
+
+@media (max-width: 991px) {
+    header .mega-menu .image img {
+        /* display: none; */
+        height: 50px;
+    }
+}
+
+header .mega-menu .links {
+    min-width: 240px;
+    flex: 1;
+}
+
+header .mega-menu .links li,
+header .subMenuHead li {
+    position: relative;
+}
+
+header .mega-menu .links li:not(:last-child),
+header .subMenuHead li:not(:last-child),
+header .mega-menu .subMenuBtn {
+    border-bottom: 1px solid #E9e6e6;
+}
+
+@media (max-width: 767px) {
+    header .mega-menu .links:first-of-type li:last-child {
+        border-bottom: 1px solid #E9e6e6;
+    }
+}
+
+header .mega-menu .links li::before,
+header .subMenuHead li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #eee;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+header .mega-menu .links li:hover::before,
+header .subMenuHead li:hover::before {
+    width: 100%;
+    /* z-index: 5000; */
+}
+
+header .mega-menu .links li a,
+header .subMenuHead li a {
+    color: var(--main-color);
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+
+}
+
+header .mega-menu .links li a .icon {
+    margin-right: 10px;
+}
+header .subMenuBtn {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 11px;
+    font-size: 18px;
+    width: 100%;
+    height: 100% !important;
+    background-color: white;
+    color: var(--main-color) !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+header .subMenuBtn:hover {
+    background-color: azure;
+}
+header .subMenuBtnHead {
+    gap: 10px;
+    color: black !important;
+    font-weight: normal !important;
+}
+header .subMenu {
+    min-width: 100%;
+    padding: 0 20px;
+    border-radius: 5px;
+    border-top: 01px solid var(--three-color);
+}
+header .subMenuHead {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    max-width: 350px;
+    border: 1px solid var(--three-color);
+    padding: 0;
+   
+    z-index: 50;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+/*End Header*/

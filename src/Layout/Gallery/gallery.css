@@ -1,0 +1,146 @@
+.imgParent {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(191, 224, 191);
+    overflow: hidden !important ;
+}
+.imgParent img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    /* display: block; */
+}
+.gallery-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+    .imgParent img {
+        height: 100px;
+    }
+}
+
+/* ################################### */
+/*Start Gallery*/
+.gallery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-color: var(--background-section-color);
+}
+
+.gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@media (min-width: 991px) {
+    .gallery .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+.gallery .container .box {
+    padding: 15px;
+    background-color: white;
+    margin: 15px;
+    box-shadow:
+        0px 12px 20px 0px rgb(0 0 0 / 13%),
+        0px 2px 4px 0px rgb(0 0 0 / 13%);
+}
+
+.gallery .box .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .box .image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255 255 255 / 30%);
+    width: 10px;
+    height: 10px;
+    transition: var(--main-transition);
+    opacity: 0;
+    z-index: 3;
+}
+
+.gallery .box .image:hover::before {
+    animation: flashing 0.7s;
+}
+
+.gallery .box .image img {
+    width: 100%;
+    max-width: 100%;
+    transition: var(--main-transition);
+}
+
+.gallery .container .box .image:hover img {
+    transform: rotate(5deg) scale(1.1);
+}
+.gallery .albumTitle {
+    padding: 5px 0;
+    text-align: right;
+    z-index: 50000000;
+    background-color: white;
+}
+/*End Gallery*/
+
+/* small screen*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@keyframes flashing {
+    0%,
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
+
+@keyframes prog {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

@@ -1,0 +1,23 @@
+.associates {
+    /* height: 400px;    */
+    /* background-color: white; */
+    overflow: hidden;
+}
+.associates .box {
+    /* background-color: rgb(225, 184, 184); */
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 50px; */
+}
+.associates .box img {
+    width: 100px;
+
+    background-color: transparent;
+}
+.associates .box {
+  width: 200px;
+  height: 200px;
+}

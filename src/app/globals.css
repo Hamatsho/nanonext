@@ -1,0 +1,481 @@
+/*rules*/
+:root {
+  --main-color: #2980b9;
+  --second-color: #2fbcef8e;
+  --main-color: #005677;
+  --second-color: #577a7c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+}
+body {
+  background-color: white;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/*Start Container */
+.containerMe {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+/* small screen*/
+@media (min-width: 780px) {
+    .containerMe {
+        width: 750px;
+    }
+}
+/* medium screen*/
+@media (min-width: 992px) {
+    .containerMe {
+        width: 970px;
+    }
+}
+/* large screen*/
+@media (min-width: 1200px) {
+    .containerMe {
+        width: 1190px;
+    }
+}
+/*End Container*/
+/*Start Main Title*/
+.main-title {
+    height: 65px;
+    border-bottom: 1px solid var(--main-color);
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--main-color);
+    position: relative;
+    text-align: right;
+    border-top-left-radius: 50px;
+    overflow: hidden;
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+}
+.main-title h3 {
+    background-color:;
+    flex: 1;
+
+    text-align: center;
+    border-bottom: 0px solid var(--main-color);
+}
+@media (max-width: 768px) {
+    .main-title h3 {
+        text-align: start;
+    }
+}
+.main-title .wave {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: -41px;
+    top: 34px;
+    width: 100px;
+    fill: var(--main-color);
+    height: 20px;
+}
+.main-title .link {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--second-color);
+    color: white;
+    border-radius: 10px;
+    margin: 0 10px;
+
+    text-wrap: nowrap;
+}
+.main-section {
+    padding: 50px 0;
+    background-color: transparent;
+}
+.main-section .main-title {
+    margin-bottom: 50px;
+}
+
+/*End Main Title*/
+
+/*Start Custom Scrollbar  */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* الخلفية */
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+/* المقبض */
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+/* عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* فقط على العناصر القابلة للتمرير */
+.scrollable-element {
+    scrollbar-width: thin; /* أو auto أو none */
+    scrollbar-color: #888 #f1f1f1; /* المقبض - الخلفية */
+}
+/*End Custom Scrollbar*/
+/*Start Grid Layout */
+.gridTemplate {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .gridTemplate {
+        /* grid-template-columns: minmax(200px, 1fr); */
+        gap: 20px;
+    }
+}
+
+/*End Grid Layout*/
+
+.hideStyle {
+  border: none;
+  outline: none;
+}
+.rtl {
+  direction: rtl;
+  flex-direction: row-reverse;
+}
+
+.ltr {
+  direction: ltr;
+}
+.main-section {
+  padding-top: 100px;
+}
+
+/* Start Box */
+.d-flex {
+    display: flex;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.d-block {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .block-mobile {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+}
+
+/* End Box */
+/* Start Padding + Margin */
+.p-10 {
+    padding: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-15 {
+    margin: 15px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+/* End Padding + Margin */
+/* Start Color */
+.c-black {
+    color: black;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-grey {
+    color: var(--grey-color);
+}
+
+.c-red {
+    color: var(--red-color);
+}
+
+.c-green {
+    color: var(--green-color);
+}
+
+.c-blue {
+    color: var(--blue-color);
+}
+
+.c-orange {
+    color: var(--orange-color);
+}
+
+.bg-red {
+    background-color: var(--red-color);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.bg-orange {
+    background-color: var(--orange-color);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-eee {
+    background-color: #eee;
+}
+
+/* End Color */
+/* Start Position */
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+/* End Position */
+/* Start Font */
+.txt-c {
+    text-align: center;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .txt-c-mobile {
+        text-align: center;
+    }
+}
+
+/* End Font */
+/* Start Border */
+.rad-6 {
+    border-radius: 6px;
+}
+
+.rad-10 {
+    border-radius: 10px;
+}
+
+.rad-half {
+    border-radius: 50%;
+}
+
+.b-none {
+    border: none;
+}
+
+.border-ccc {
+    border: 1px solid #ccc;
+}
+
+.border-eee {
+    border: 1px solid #eee;
+}
+
+/* End Border */
+/* Start Width + Height */
+.w-full {
+    width: 100%;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-100 {
+    height: 100px;
+}
+
+/* End Width + Height */
+/* Start Components */
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* End Components */

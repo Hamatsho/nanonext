@@ -1,0 +1,23 @@
+.advarts {
+    padding: 0;
+    /* background-color: azure  */
+    /* padding-top: 20px; */
+    padding-bottom: 50px;
+    /* background-color: #ddd; */
+    overflow: hidden;
+
+}
+.advarts .advart {
+    width: 100%;
+    text-align: center;
+}
+.advarts .advart img {
+    width: 100%;
+}
+.advarts .advart .info .name {
+    color: var(--main-color);
+    padding-bottom: 10px;
+}
+.advarts .info {
+    padding-top: 15px;
+}

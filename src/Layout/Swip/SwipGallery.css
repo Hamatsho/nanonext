@@ -1,0 +1,46 @@
+.swip-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: azure;
+    overflow: hidden !important;
+    border-radius: 8px;
+    direction: rtl;
+}
+
+.main-swiper .slide {
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden !important;
+  
+}
+.main-swiper .slide img {
+    max-width: 100%;
+    /* max-height: 400px; */
+    /* object-fit: cover; */
+    border-radius: 8px;
+}
+
+.thumbs-swiper {
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.thumbs-swiper img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 4px solid transparent;
+    border-radius: 4px;
+    opacity: .7;
+}
+.thumbs-swiper .swiper-slide-thumb {
+    width: 50px;
+}
+.thumbs-swiper .swiper-slide-thumb-active img {
+    border-color: var(--main-color);
+    opacity: 1;
+}

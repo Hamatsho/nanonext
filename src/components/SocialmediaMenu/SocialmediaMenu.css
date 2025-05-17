@@ -1,0 +1,72 @@
+.circular-menu {
+    position: fixed;
+    top: 100%; 
+    left: -20px;
+    transform: translateY(100%);
+    background-color: #282c34;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 7000;
+    overflow: hidden;
+    opacity: 0.7;
+ 
+}
+.circular-menu.open,
+.circular-menu:hover {
+    opacity: 1;
+    left: 0;
+}
+/* زر التحكم بفتح/إغلاق القائمة */
+.menu-toggle img {
+    -webkit-user-drag: none;
+}
+.menu-toggle {
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-toggle:hover {
+    opacity: 1;
+    background-color: #3b3f47;
+}
+
+/* عناصر القائمة */
+.menu-items {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    transition: all 0.3s;
+    /* margin-top: 10px; */
+}
+
+.menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3b3f47;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.menu-items a:hover {
+    background-color: #4a90e2;
+}

@@ -1,0 +1,25 @@
+.pagination {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: row-reverse;
+}
+
+.pagination button {
+  padding: 8px 5px;
+  border: none;
+  outline: none;
+  width: 80px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination button.desabled {
+  opacity: 0.6;
+}
+
+.pagination span {
+  padding: 8px 5px;
+}

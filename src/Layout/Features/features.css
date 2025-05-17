@@ -1,0 +1,118 @@
+.features {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--background-section-color);
+    position: relative;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    direction: rtl;
+    overflow: hidden;
+}
+.features .containeren {
+    direction: ltr;
+}
+.features .box {
+    background-color: white;
+    box-shadow:
+        0 12px 20px rgb(0 0 0 / 13%),
+        0 2px 4px rgb(0 0 0 / 12%);
+    counter-increment: features;
+    transition: var(--main-transition);
+    position: relative;
+}
+
+.features .box::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 50%;
+    top: -3px;
+    transform: translatex(-50%);
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+.features .box:hover {
+    transform: translateY(-10px);
+}
+
+.features .box:hover::before {
+    width: 100%;
+}
+
+.features .box i {
+    margin: 30px auto 20px;
+    display: block;
+    text-align: center;
+    color: #d5d5d5;
+}
+.features .box img {
+    width: 80px;
+    display: block;
+    margin: 30px auto 20px;
+}
+.features .box > h3 {
+    text-align: center;
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.features .box .info {
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.features .box .info::before {
+    content: "0" counter(features);
+    position: absolute;
+    width: 90px;
+    height: 100%;
+    top: 0;
+    right: -10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    padding-right: 15px;
+}
+
+.features .box .info::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: calc(100% + 0.5px);
+    top: 0;
+    right: 70px;
+    background-color: #d5d5d5;
+    transform: skewX(25deg);
+}
+.features .box .infoen::after {
+    transform: skewX(-30deg);
+    right: calc(100% - 120px);
+}
+.features .box .infoen::before {
+    left: 0;
+}
+.features .box .infoen {
+    text-align: right;
+}
+.features .box .info a {
+    color: var(--main-color);
+}
+
+/*End features*/
