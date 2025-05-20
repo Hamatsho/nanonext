@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 
 import { SkCard } from "@/components/Card";
-import "@/components/css/about.css";
+//import "@/components/css/about.css";
 import { useLanguage } from "@/lang/LanguageContext";
 import { fetchData } from "@/Services/api";
 import Pagination from "@/components/Pagination/";
@@ -105,7 +105,7 @@ const Products = () => {
     }
 
     return (
-        <div className="containerMe">
+        <div className="containerMe hidePaddingMobiel">
             <Search
                 query={search}
                 handleSearch={handleSearch}

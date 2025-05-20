@@ -30,7 +30,7 @@ const CustomSwiper = ({ children, className = "", swiperProps = {} }) => {
         <div className={` ${className}`}>
             <Swiper className="custom-swiper-container"
                 ref={swiperRef}
-                modules={[Navigation, Pagination, Autoplay, EffectFlip, A11y]}
+                modules={[Navigation,Pagination, Autoplay, EffectFlip, A11y]}
                 // effect="flip"
                 loop={true}
                 autoplay={{
@@ -43,7 +43,7 @@ const CustomSwiper = ({ children, className = "", swiperProps = {} }) => {
                     prevEl: ".swiper-button-prev-custom"
                 }}
                 pagination={{
-                    el: ".swiper-pagination-custom",
+                    el: ".swiper-pagination-custo",
                     clickable: true
                 }}
                 {...swiperProps}

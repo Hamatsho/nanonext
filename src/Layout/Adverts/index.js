@@ -8,47 +8,29 @@ import { Autoplay, EffectFlip, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-flip";
 
-import { fetchData } from "../../Services/api";
-import Skeleton from "react-loading-skeleton";
+import { fetchData } from "@/Services/api";
+//import Skeleton from "react-loading-skeleton";
 
 import "./adverts.css";
 
-function Adverts() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  function Adverts({data}) {
+ // const [data, setData] = useState([]);
+  //const [loading, setLoading] = useState(true);
+//  const [error, setError] = useState(null);
+//let dt ={},data = []
 
-  useEffect(() => {
+/*  useEffect(() => {
     fetchData("advert/madverts")
       .then((res) => {
         setData(res.data);
-        setLoading(false);
+        
       })
       .catch((error) => {
-        setError(error.message);
-        setLoading(false);
+        console.log(error.message);
+       
       });
   }, []);
-
-  function Skele(props) {
-    return (
-      <div>
-        <span style={{ padding: "10px", color: props.color || "black" }}>
-          {props.text}
-        </span>
-        <Skeleton height={"300px"} width={"100%"} />
-      </div>
-    );
-  }
-
-  if (loading) {
-    return <Skele key="loading" text="Loading..." />;
-  }
-
-  if (error) {
-    return <Skele key="error" text={error} color="red" />;
-  }
-
+*/
   return (
     <div className="containerMe advarts">
       <Swiper

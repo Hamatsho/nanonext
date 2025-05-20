@@ -2,9 +2,9 @@
 const nextConfig = {
   async rewrites() {
     return [
-      { source: '/posts', destination: '/unified' },
-      { source: '/news', destination: '/files' },
-      { source: '/features', destination: '/unified' },
+      { source: '/albums', destination: '/gallery' },
+      { source: '/images', destination: '/gallery' },
+      { source: '/photos', destination: '/gallery' },
     ];
   },
 };

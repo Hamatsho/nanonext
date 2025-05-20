@@ -1,9 +1,10 @@
-import Product from "../../components/Product/index.js";
-import CustomSwiper from "../../components/CustomSwiper/";
+"use client";
+import Product from "@/components/Product/index.js";
+import CustomSwiper from "@/components/CustomSwiper/";
 import { SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../../lang/LanguageContext.jsx";
-import { api } from "../../Services/api.js";
+import { useLanguage } from "@/lang/LanguageContext.jsx";
+import { api } from "@/Services/api.js";
 
 const Shop = ({ reftype }) => {
     const [data, setData] = useState([]);

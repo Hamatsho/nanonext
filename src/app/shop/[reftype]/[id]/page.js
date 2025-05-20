@@ -1,7 +1,6 @@
-// app/shop/product/[id]/page.jsx
+
 export const dynamic = "force-dynamic";
 import ProductSEO from "@/components/ProductSEO";
-import Head from "next/head";
 
 import Swip from "@/Layout/Swip";
 import Price from "@/components/Price";
@@ -17,7 +16,7 @@ export async function generateMetadata(context) {
         `${process.env.API_URL}/shop/products/${id}?include=seostorm_options`
     );
     return seo;
-}  
+}
 //##########
 export default async function ProductDetails(context) {
     const params = await context.params;
@@ -82,10 +81,8 @@ export default async function ProductDetails(context) {
 
     return (
         <>
-            <main> 
-            <Head>
-                <title>Najeeb</title>
-            </Head>
+            <main>
+
                 <div className={`containerMe ${direction} productDetails`}>
                     <Swip images={data.images} />
                     <h3 className="name">{data.name}</h3>

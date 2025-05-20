@@ -41,8 +41,15 @@ const Header = ({ dataMenu }) => {
                     >
                         <img src="/imgs/nanologo.png" alt="nano" />
                         <div className="name">
-                            <p>نانو 2 سوفت</p>
+                         {/*   <p>نانو 2 سوفت</p>
                             <p>Nano2soft</p>
+                            */}
+                            <h1>{language === "ar"?
+                              <span>نانو 2 سوفت</span>
+                             :
+                             <span>Nano2soft</span>
+                            }
+                            </h1>
                         </div>
                     </Link>
                     <div className="flex langParent">

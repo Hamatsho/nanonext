@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../../lang/LanguageContext";
 import "./stats.css";

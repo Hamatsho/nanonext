@@ -48,29 +48,29 @@ const Card = props => {
 
 export const SkCard = ({ dirction }) => {
     return (
-        <div className={"skCard " + dirction}>
+        <div className={`${styles.skCard} ${dirction}`}>
             <Skeleton
-                containerClassName="skCard"
-                className="item"
+                containerClassName={styles.skCard}
+                className={styles.item}
                 width={"100%"}
                 height={200}
             />
             <Skeleton
-                className="item"
-                containerClassName="skCard"
+                className={styles.item}
+                containerClassName={styles.skCard}
                 width={200}
                 height={20}
                 // style={{ margin: " auto", display: "block" }}
             />
             <Skeleton
-                className="item"
-                containerClassName="skCard"
+                className={styles.item}
+                containerClassName={styles.skCard}
                 width={"80%"}
                 height={60}
             />
             <Skeleton
-                className="item"
-                containerClassName="skCard"
+                className={styles.item}
+                containerClassName={styles.skCard}
                 width={"80px"}
                 height={"20px"}
                 style={{ margin: " auto", display: "block" }}

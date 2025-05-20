@@ -1,0 +1,18 @@
+.forms {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.forms .input {
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    display: block;
+    min-width: 100%;
+    background-color: white;
+}

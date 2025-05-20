@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/lang/LanguageContext";
 import { fetchData } from "@/Services/api";
 
-import Skeleton from "react-loading-skeleton";
+
 import Link from "next/link";
 
 const styleEn = {
@@ -68,7 +68,8 @@ export default function Menu({ dataMenu }) {
     const [menuStatus, setMenuStatus] = useState(false);
     const { language } = useLanguage();
     function getPath(item) {
-        let path = item.code;
+      //  let path = item.type=="url" ?item.url :`/${item.code}`;
+       let path = item.url;
         if (item.type === "static-page") {
             path = `/static/${item.code}`;
             let s = item.url.split("/");

@@ -1,25 +1,25 @@
 /*rules*/
 :root {
-  --main-color: #2980b9;
-  --second-color: #2fbcef8e;
-  --main-color: #005677;
-  --second-color: #577a7c;
+    --main-color: #2980b9;
+    --second-color: #2fbcef8e;
+    --main-color: #005677;
+    --second-color: #577a7c;
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-  -webkit-user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
 }
 body {
-  background-color: white;
+    background-color: white;
 }
 ul {
-  list-style: none;
+    list-style: none;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 /*Start Container */
 .containerMe {
@@ -155,21 +155,24 @@ a {
 /*End Grid Layout*/
 
 .hideStyle {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 .rtl {
-  direction: rtl;
-  flex-direction: row-reverse;
+    direction: rtl;
+    flex-direction: row-reverse;
 }
 
 .ltr {
-  direction: ltr;
+    direction: ltr;
 }
 .main-section {
-  padding-top: 100px;
+    padding-top: 100px;
 }
-
+.skeleton {
+    background-color: #eee;
+    margin: 5px;
+}
 /* Start Box */
 .d-flex {
     display: flex;
@@ -479,3 +482,48 @@ a {
 }
 
 /* End Components */
+/*Loader*/
+/* HTML: <div class="loader"></div> */
+.loader-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    --c: linear-gradient(#005677 0 0);
+    --m: radial-gradient(farthest-side, #577a7c 92%, #0000);
+    background:
+        var(--m) center / 20px 20px,
+        var(--c) left 50% top -20px/8px 16px,
+        var(--c) left 50% bottom -20px/8px 16px,
+        var(--c) top 50% left -20px/16px 8px,
+        var(--c) top 50% right -20px/16px 8px;
+    background-repeat: no-repeat;
+    animation:
+        l18-1 1.5s infinite,
+        l18-2 1.5s infinite;
+}
+@keyframes l18-1 {
+    30%,
+    70% {
+        background-position:
+            center,
+            left 50% top calc(50% - 8px),
+            left 50% bottom calc(50% - 8px),
+            top 50% left calc(50% - 8px),
+            top 50% right calc(50% - 8px);
+    }
+}
+@keyframes l18-2 {
+    0%,
+    40% {
+        transform: rotate(0);
+    }
+    60%,
+    100% {
+        transform: rotate(90deg);
+    }
+}

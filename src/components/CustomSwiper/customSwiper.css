@@ -77,8 +77,7 @@
     }
 }
 .shop .swiper-slide {
-  
-    height: 400px;
+    height: 450px;
     border: 2px solid var(--main-color);
- 
+    border-radius: 5px;
 }

@@ -9,7 +9,15 @@
     width: 100%;
     /* background-color: green; */
 }
-
+.products .product {
+    border: 1px solid var(--main-color);
+    padding: 2px;
+}
+.products .product .description {
+    margin-bottom: 5px;
+    text-align: right;
+    line-height: 1.5;
+}
 @media (max-width: 767px) {
     .products {
         /* grid-template-columns: repeat(2,1fr); */
@@ -89,13 +97,16 @@
     margin-bottom: 50px;
     background-color: white;
 }
-.shop .product {
-    border-bottom: none;
-}
+
 .shop .swiper-slide {
 }
 .shop .swiper-slide .product {
     width: 100%;
 }
 .shop .custom-swiper {
+}
+
+.hidePaddingMobiel {
+    padding-left: 5px;
+    padding-right: 5px;
 }

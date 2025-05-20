@@ -1,10 +1,12 @@
 "use client";
 
 import "./features.css";
-import Title from "../../components/Title";
+/*
+import Title from "@/components/Title";
 import { useEffect, useState } from "react";
-import { api } from "../../Services/api";
-import { useLanguage } from "../../lang/LanguageContext";
+import { api } from "@/Services/api";
+import { useLanguage } from "@/lang/LanguageContext";
+*/
 function Box() {
     return (
         <div className="box">
@@ -17,8 +19,8 @@ function Box() {
         </div>
     );
 }
-const Features = () => {
-    const [data, setData] = useState([]);
+const Features = ({data,name,language}) => {
+    /*const [data, setData] = useState([]);
     useEffect(() => {
         api.get("webbasic/features")
             .then(data => {
@@ -30,6 +32,7 @@ const Features = () => {
             });
     }, []);
     const { language } = useLanguage();
+    */
     const ui = data.map(f => {
         return (
             <div className="box" key={f.id}>

@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import MySwiper from "../../components/MySwiper";
+//import MySwiper from "../../components/MySwiper";
 import Success from "@/Layout/Success";
 import { useLanguage } from "../../lang/LanguageContext";
-import "./associates.css";
+//import "./associates.css";
 import { SwiperSlide } from "swiper/react";
 import { fetchData } from "../../Services/api";
 import Skeleton from "react-loading-skeleton";
@@ -18,7 +18,7 @@ function Associates(props) {
     let bgColor = "#eee",
         textColor = "black";
     let ui;
-    let ss= data.map((el, i) => {
+    let ss = data.map((el, i) => {
         if (el.properties)
             el.properties.map(p => {
                 if (p.code === "bgColor") bgColor = p.value;
@@ -56,7 +56,14 @@ function Associates(props) {
     }, [language]);
 
     if (loading) {
-        ui = <Skeleton key={"23"} height={"300px"} width={"100%"} />;
+        ui = (
+            <Skeleton
+                className="skeleton"
+                key={"23"}
+                height={"300px"}
+                width={"100%"}
+            />
+        );
         // return <span>Loading...</span>
     }
     if (error) {
@@ -64,7 +71,7 @@ function Associates(props) {
     }
     return (
         <div className="" style={{ backgroundColor: "white" }}>
-            <div className="containerMe associates">
+            <div className="containerMe associats">
                 <Success partners={ss} />
             </div>
         </div>

@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { fetchData } from "@/Services/api";
 import Title from "@/components/Title";
 // import { Link } from "react-router-dom";
 import "./files.css";
-import "../globals.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Skeleton from "react-loading-skeleton";
@@ -51,8 +51,8 @@ function File({ name, size, date, fileName, src, id, desc }) {
 const Files = () => {
     const [categories, setCategories] = useState([]);
     const [files, setFiles] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [loading2, setLoading2] = useState(false);
+    const [loading, setLoading] = useState(true);
+    const [loading2, setLoading2] = useState(true);
     // const [error, setError] = useState(false);
     const [currentCat, setCurrentCat] = useState("all");
     const [currentPage, setCurrentPage] = useState(1);
@@ -62,6 +62,7 @@ const Files = () => {
     const dirction = language === "en" ? "ltr" : "rtl";
     useEffect(() => {
         setLoading(true);
+
         fetchData("media/filelists", {
             headers: {
                 "Accept-language": language
@@ -125,9 +126,10 @@ const Files = () => {
         );
     });
 
-    let filesUI = files.map(f => {
+    let filesUI = files.map((f, i) => {
         return (
             <File
+                key={i}
                 id={f.id}
                 name={f.name}
                 size={f.file.file_size}
@@ -146,25 +148,33 @@ const Files = () => {
         );
     }
 
-    const SkCat = (
+    const SkCat = () => (
         <Skeleton
             containerClassName="fileList containerMe"
             height={"50px"}
             width={"100px"}
-        />
+            className="skeleton"
+            />
     );
     if (loading) {
-        catUI = [SkCat, SkCat];
+        catUI = [<SkCat key="1" />, <SkCat key="2" />];
     }
-    const SkFile = (
+    const SkFile = () => (
         <Skeleton
-            containerClassName="  d-grid gap-20 containerMe"
+            containerClassName="bg-grey  d-grid gap-20 containerMe"
             height={"200px"}
-            width={"200px"}
-        />
+            width={"250px"}
+            className="skeleton"
+            />
+            
     );
     if (loading2) {
-        filesUI = [SkFile, SkFile, SkFile, SkFile];
+        filesUI = [
+            <SkFile key="1" />,
+            <SkFile key="2" />,
+            <SkFile key="3" />,
+            <SkFile key="4" />
+        ];
     }
     function handlePageChange(page) {
         setCurrentPage(page);

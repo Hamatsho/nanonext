@@ -1,13 +1,12 @@
-export default function Title({ text, showAll }) {
+export default function Title({ text, showAll, language }) {
     return (
         <div className="main-title containerMe ">
             <h3>{text}</h3>
-            { showAll?
-            <a className="link" href={showAll}>
-                عرض الكل
-            </a>
-            :null
-            }
+            {showAll ? (
+                <a className="link" href={showAll}>
+                    {language !== "ar" ? "عرض الكل" : "Show All"}
+                </a>
+            ) : null}
             <svg
                 className="wave"
                 viewBox="0 0 1440 320"

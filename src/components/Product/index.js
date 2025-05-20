@@ -27,8 +27,10 @@ function discount(oldPrice, newPrice) {
 //   );
 // }
 const des = `
- description description description description description description description description description description description description description description description description description description description description description description description 
-`;
+.تصميم وتطوير الأنظمة المعلوماتية والإدارية والمحاسبية والخدمية
+تعمل نانوسوفت على تطوير نظام محاسبي إداري وخدمي شامل يمكنه التعامل مع جميع مجالات الاعمال من المؤسسات والمحلات التجاريه الصغيره الى المؤسسات الشركات...
+اكثر ...
+ `;
 function Product({ data }) {
     // let data = props.data
     if (!data) return;
